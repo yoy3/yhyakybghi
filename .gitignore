@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do You Love Me?</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #ff5e78;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff5e78;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #d83a56;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Do You Love Me?</h1>
+  <form id="loveForm">
+    <label for="loveQuestion">Please tell me, do you love me?</label>
+    <input type="text" id="loveQuestion" required>
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    document.getElementById('loveForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  let answer = document.getElementById('loveQuestion').value;
+  if (answer.toLowerCase() === 'yes') {
+    alert('That\'s wonderful! I love you too!');
+  } else if (answer.toLowerCase() === 'maybe') {
+    alert('I understand. Take your time.');
+  } else {
+    alert('It\'s okay. Just know that I care about you.');
+  }
+});
+
+  </script>
+</body>
+</html>
